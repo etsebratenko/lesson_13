@@ -1,0 +1,73 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.content {
+  background-color: grey;
+  padding: 20px;
+  margin: 20px;
+}
+
+.content__circle {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: relative;
+  left: 0;
+
+  /* animation-name: white-circle;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-delay: 2s; */
+  animation: white-circle 5s linear infinite alternate 2s;
+}
+
+.content:hover .content__circle{
+  animation-play-state: paused;
+}
+
+@keyframes white-circle {
+  0% {
+    left: 0;
+  }
+  20%{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 165, 252, 0.826);
+  }
+
+  40%{
+    border-radius: 0%;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(131, 112, 241, 0.826);
+  }
+
+  60%{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    background-color: rgba(151, 247, 176, 0.826);
+  }
+
+  80%{
+    border-radius: 0%;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(246, 251, 118, 0.826);
+  }
+
+  100%{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    left: 90%;
+  }
+}
